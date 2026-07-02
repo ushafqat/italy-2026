@@ -22,7 +22,6 @@
     --ink-faint: #9a8a78;
     --line: #e0d5c5;
     --white: #fffefb;
-    --cream-rgb: 253, 248, 240;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -48,22 +47,16 @@
     color: #fff;
   }
   .hero-bg {
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0;
     background-image: url('https://images.unsplash.com/photo-1543465077-db45d34b88a4?w=1920&q=85');
     background-size: cover;
     background-position: center 40%;
   }
   .hero-overlay {
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0;
     background: linear-gradient(180deg, rgba(42,32,24,0.45) 0%, rgba(42,32,24,0.3) 50%, rgba(196,90,58,0.35) 100%);
   }
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 2rem;
-  }
+  .hero-content { position: relative; z-index: 2; padding: 2rem; }
   .hero .flag-emoji { font-size: 2rem; margin-bottom: 0.5rem; }
   .hero h1 {
     font-family: 'Cormorant Garamond', serif;
@@ -73,43 +66,25 @@
     line-height: 0.95;
     text-shadow: 0 2px 30px rgba(0,0,0,0.3);
   }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold);
-    font-weight: 400;
-  }
+  .hero h1 em { font-style: italic; color: var(--gold); font-weight: 400; }
   .hero .sub {
     font-size: clamp(0.75rem, 2vw, 0.95rem);
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    opacity: 0.85;
-    margin-top: 1.2rem;
-    font-weight: 400;
+    letter-spacing: 0.35em; text-transform: uppercase;
+    opacity: 0.85; margin-top: 1.2rem; font-weight: 400;
   }
   .hero .route {
     font-size: clamp(0.7rem, 1.5vw, 0.85rem);
-    letter-spacing: 0.06em;
-    margin-top: 0.6rem;
-    opacity: 0.65;
-    font-weight: 300;
+    letter-spacing: 0.06em; margin-top: 0.6rem; opacity: 0.65; font-weight: 300;
   }
   .hero .dates {
     font-family: 'DM Mono', monospace;
     font-size: clamp(0.65rem, 1.3vw, 0.78rem);
-    margin-top: 1rem;
-    opacity: 0.6;
-    letter-spacing: 0.1em;
+    margin-top: 1rem; opacity: 0.6; letter-spacing: 0.1em;
   }
   .scroll-cue {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5rem;
-    opacity: 0.4;
-    animation: bounce 2s infinite;
-    z-index: 2;
-    color: #fff;
+    position: absolute; bottom: 1.5rem; left: 50%;
+    transform: translateX(-50%); font-size: 1.5rem; opacity: 0.4;
+    animation: bounce 2s infinite; z-index: 2; color: #fff;
   }
   @keyframes bounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
@@ -117,343 +92,217 @@
   }
 
   /* SECTIONS */
-  .section {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 5rem 1.5rem 0;
-  }
+  .section { max-width: 920px; margin: 0 auto; padding: 5rem 1.5rem 0; }
   .section-label-row {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 0.4rem;
+    display: flex; align-items: center; gap: 1rem;
+    justify-content: center; margin-bottom: 0.4rem;
   }
   .section-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: var(--terracotta);
-    font-weight: 600;
+    font-size: 0.65rem; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--terracotta); font-weight: 600;
   }
-  .section-label-line {
-    width: 30px;
-    height: 1px;
-    background: var(--line);
-  }
+  .section-label-line { width: 30px; height: 1px; background: var(--line); }
   .section-italian {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 0.9rem;
-    color: var(--ink-faint);
-    text-align: center;
-    margin-bottom: 0.3rem;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 0.9rem; color: var(--ink-faint); text-align: center; margin-bottom: 0.3rem;
   }
   .section-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2.2rem, 5vw, 3.2rem);
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 2.5rem;
-    letter-spacing: -0.01em;
-    color: var(--ink);
+    font-weight: 500; text-align: center; margin-bottom: 2.5rem;
+    letter-spacing: -0.01em; color: var(--ink);
   }
 
   /* MAP */
-  #map {
-    height: 440px;
-    border-radius: 2px;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 25px rgba(42,32,24,0.12);
-  }
+  #map { height: 440px; border-radius: 2px; margin-bottom: 1rem; box-shadow: 0 2px 25px rgba(42,32,24,0.12); }
   .map-legend {
-    text-align: center;
-    font-size: 0.72rem;
-    color: var(--ink-faint);
-    margin-bottom: 1rem;
-    letter-spacing: 0.03em;
-    font-style: italic;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.9rem;
+    text-align: center; color: var(--ink-faint); margin-bottom: 1rem;
+    font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 0.9rem;
   }
 
   /* ARC */
   .arc {
-    font-size: 1.1rem;
-    color: var(--ink-light);
-    line-height: 1.9;
-    text-align: center;
-    max-width: 680px;
-    margin: 0 auto 3rem;
-    font-weight: 300;
+    font-size: 1.1rem; color: var(--ink-light); line-height: 1.9;
+    text-align: center; max-width: 680px; margin: 0 auto 3rem; font-weight: 300;
   }
   .arc strong { color: var(--ink); font-weight: 500; }
   .arc em { font-style: italic; color: var(--terracotta); }
 
   /* STATS */
-  .stats {
-    display: flex;
-    justify-content: center;
-    gap: 3.5rem;
-    margin-bottom: 4rem;
-    flex-wrap: wrap;
-  }
+  .stats { display: flex; justify-content: center; gap: 3.5rem; margin-bottom: 4rem; flex-wrap: wrap; }
   .stat { text-align: center; }
   .stat .num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 500;
-    color: var(--terracotta);
-    line-height: 1;
+    font-family: 'Cormorant Garamond', serif; font-size: 3rem;
+    font-weight: 500; color: var(--terracotta); line-height: 1;
   }
   .stat .label {
-    font-size: 0.62rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    margin-top: 0.5rem;
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-faint); margin-top: 0.5rem;
   }
 
   /* DAYS */
   .day {
-    padding: 2.5rem 0;
-    border-bottom: 1px solid var(--line);
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 2rem;
+    padding: 2.5rem 0; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 120px 1fr; gap: 2rem;
   }
   .day:last-child { border-bottom: none; }
-  .day-left {
-    text-align: right;
-  }
+  .day-left { text-align: right; }
   .day-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 400;
-    color: var(--terracotta);
-    line-height: 1;
+    font-family: 'Cormorant Garamond', serif; font-size: 3rem;
+    font-weight: 400; color: var(--terracotta); line-height: 1;
   }
   .day-date {
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    margin-top: 0.4rem;
-    font-weight: 500;
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-faint); margin-top: 0.4rem; font-weight: 500;
   }
-  .day-icon {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-  }
-  .day-right { }
+  .day-icon { font-size: 1.5rem; margin-top: 0.5rem; }
   .day-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.7rem;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 0.75rem;
-    line-height: 1.2;
+    font-family: 'Cormorant Garamond', serif; font-size: 1.7rem;
+    font-weight: 500; color: var(--ink); margin-bottom: 0.75rem; line-height: 1.2;
   }
-  .day-body {
-    font-size: 0.9rem;
-    color: var(--ink-light);
-    line-height: 1.8;
-  }
+  .day-body { font-size: 0.9rem; color: var(--ink-light); line-height: 1.8; }
   .day-body p { margin-bottom: 0.5rem; }
   .day-body .time {
-    color: var(--terracotta);
-    font-weight: 600;
-    font-size: 0.78rem;
+    color: var(--terracotta); font-weight: 600; font-size: 0.78rem;
     font-family: 'DM Mono', monospace;
   }
   .day-body strong { color: var(--ink); font-weight: 500; }
   .options {
-    margin-top: 0.6rem;
-    padding: 0.85rem 1.25rem;
-    background: var(--cream-deep);
-    border-radius: 2px;
+    margin-top: 0.6rem; padding: 0.85rem 1.25rem;
+    background: var(--cream-deep); border-radius: 2px;
   }
   .options .opt-label {
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--olive);
-    font-weight: 600;
-    margin-bottom: 0.3rem;
+    font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--olive); font-weight: 600; margin-bottom: 0.3rem;
   }
   .options p { font-size: 0.85rem; color: var(--ink-light); }
 
   /* STAYS */
-  .stays {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0;
-    margin-bottom: 3rem;
-  }
-  .stay {
-    padding: 1.75rem 1.5rem 1.75rem 0;
-  }
-  .stay:not(:last-child) {
-    border-right: 1px solid var(--line);
-  }
+  .stays { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin-bottom: 3rem; }
+  .stay { padding: 1.75rem 1.5rem 1.75rem 0; }
+  .stay:not(:last-child) { border-right: 1px solid var(--line); }
   .stay .check {
-    font-size: 0.58rem;
-    letter-spacing: 0.15em;
-    color: var(--olive);
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
+    font-size: 0.58rem; letter-spacing: 0.15em; color: var(--olive);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 0.4rem;
   }
   .stay .name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.35rem;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 0.15rem;
+    font-family: 'Cormorant Garamond', serif; font-size: 1.35rem;
+    font-weight: 500; color: var(--ink); margin-bottom: 0.15rem;
   }
   .stay .loc {
-    font-size: 0.78rem;
-    color: var(--ink-faint);
-    margin-bottom: 0.5rem;
-    font-style: italic;
-    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.78rem; color: var(--ink-faint); margin-bottom: 0.5rem;
+    font-style: italic; font-family: 'Cormorant Garamond', serif;
   }
-  .stay .notes {
-    font-size: 0.76rem;
-    color: var(--ink-light);
-    line-height: 1.55;
-  }
+  .stay .notes { font-size: 0.76rem; color: var(--ink-light); line-height: 1.55; }
 
-  /* BOOKINGS */
-  .bookings {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 0;
-    margin-bottom: 3rem;
+  /* BOOKINGS — dynamic */
+  .bookings-controls {
+    display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;
   }
-  .booking {
-    padding: 1.5rem 1.5rem 1.5rem 0;
-    border-bottom: 1px solid var(--line);
+  .btn {
+    padding: 0.5rem 1.25rem; border: 1px solid var(--line); background: var(--white);
+    color: var(--ink); font-size: 0.75rem; font-weight: 500; cursor: pointer;
+    border-radius: 2px; transition: all 0.2s; font-family: 'Inter', sans-serif;
+    letter-spacing: 0.05em;
   }
-  .booking:nth-last-child(-n+2) { border-bottom: none; }
+  .btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
+  .btn.primary { background: var(--terracotta); color: #fff; border-color: var(--terracotta); }
+  .btn.primary:hover { background: var(--terracotta-dark); border-color: var(--terracotta-dark); }
+  .btn.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  .bookings { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; margin-bottom: 3rem; }
+  .booking { padding: 1.5rem 1.5rem 1.5rem 0; border-bottom: 1px solid var(--line); }
   .booking .status {
-    font-size: 0.58rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
+    font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 0.4rem;
   }
   .booking.done .status { color: var(--olive); }
   .booking.todo .status { color: var(--ink-faint); }
-  .booking .name {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 0.35rem;
-  }
-  .booking .details {
-    font-size: 0.8rem;
-    color: var(--ink-light);
-    line-height: 1.6;
-  }
+  .booking .name { font-size: 0.95rem; font-weight: 500; color: var(--ink); margin-bottom: 0.35rem; }
+  .booking .details { font-size: 0.8rem; color: var(--ink-light); line-height: 1.6; white-space: pre-line; }
   .booking .conf {
-    font-size: 0.68rem;
-    color: var(--ink-faint);
-    margin-top: 0.4rem;
+    font-size: 0.68rem; color: var(--ink-faint); margin-top: 0.4rem;
     font-family: 'DM Mono', monospace;
   }
-  .booking .warn {
-    margin-top: 0.5rem;
-    font-size: 0.75rem;
-    color: var(--terracotta-dark);
+  .booking .warn { margin-top: 0.5rem; font-size: 0.75rem; color: var(--terracotta-dark); }
+
+  /* EDIT MODE */
+  .booking.editing { background: var(--cream-deep); padding-left: 1rem; border-radius: 2px; }
+  .booking.editing .edit-row { margin-bottom: 0.75rem; }
+  .booking.editing .edit-label {
+    font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 600; margin-bottom: 0.2rem; display: block;
   }
+  .booking.editing input, .booking.editing textarea, .booking.editing select {
+    width: 100%; padding: 0.4rem 0.5rem; border: 1px solid var(--line);
+    border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 0.8rem;
+    color: var(--ink); background: var(--white);
+  }
+  .booking.editing textarea { resize: vertical; min-height: 60px; }
+  .booking.editing .status-toggle {
+    display: flex; gap: 0.5rem; align-items: center;
+  }
+  .booking.editing .status-toggle label { font-size: 0.75rem; color: var(--ink-light); }
+
+  .save-bar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--ink); color: var(--cream);
+    padding: 1rem 1.5rem; display: none; align-items: center;
+    justify-content: center; gap: 1rem; z-index: 1000;
+    box-shadow: 0 -2px 20px rgba(0,0,0,0.2); flex-wrap: wrap;
+  }
+  .save-bar.visible { display: flex; }
+  .save-bar .save-text { font-size: 0.8rem; opacity: 0.8; }
+  .save-bar .btn { background: var(--terracotta); color: #fff; border-color: var(--terracotta); }
+  .save-bar .btn.secondary { background: transparent; color: var(--cream); border-color: var(--ink-faint); }
+
+  .toast {
+    position: fixed; bottom: 5rem; left: 50%; transform: translateX(-50%);
+    background: var(--olive); color: #fff; padding: 0.75rem 1.5rem;
+    border-radius: 2px; font-size: 0.8rem; z-index: 1001;
+    opacity: 0; transition: opacity 0.3s; pointer-events: none;
+  }
+  .toast.show { opacity: 1; }
 
   /* PLAYBOOK */
-  .playbook {
-    list-style: none;
-    counter-reset: pb;
-    margin-bottom: 3rem;
-  }
+  .playbook { list-style: none; counter-reset: pb; margin-bottom: 3rem; }
   .playbook li {
-    counter-increment: pb;
-    padding: 1.5rem 0 1.5rem 3.5rem;
-    position: relative;
-    border-bottom: 1px solid var(--line);
+    counter-increment: pb; padding: 1.5rem 0 1.5rem 3.5rem;
+    position: relative; border-bottom: 1px solid var(--line);
   }
   .playbook li:last-child { border-bottom: none; }
   .playbook li::before {
-    content: counter(pb, decimal-leading-zero);
-    position: absolute;
-    left: 0;
-    top: 1.5rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--gold);
-    font-weight: 500;
+    content: counter(pb, decimal-leading-zero); position: absolute;
+    left: 0; top: 1.5rem; font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-style: italic; color: var(--gold); font-weight: 500;
   }
-  .playbook h3 {
-    font-size: 0.92rem;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 0.35rem;
-  }
-  .playbook p {
-    font-size: 0.82rem;
-    color: var(--ink-light);
-    line-height: 1.6;
-  }
+  .playbook h3 { font-size: 0.92rem; font-weight: 500; color: var(--ink); margin-bottom: 0.35rem; }
+  .playbook p { font-size: 0.82rem; color: var(--ink-light); line-height: 1.6; }
 
   /* PRACTICAL */
-  .practical {
-    list-style: none;
-    margin-bottom: 4rem;
-  }
+  .practical { list-style: none; margin-bottom: 4rem; }
   .practical li {
-    padding: 1.1rem 0;
-    font-size: 0.82rem;
-    color: var(--ink-light);
-    line-height: 1.65;
-    border-bottom: 1px solid var(--line);
+    padding: 1.1rem 0; font-size: 0.82rem; color: var(--ink-light);
+    line-height: 1.65; border-bottom: 1px solid var(--line);
   }
   .practical li:last-child { border-bottom: none; }
   .practical li strong { color: var(--ink); font-weight: 500; }
 
   /* DIVIDER */
-  .divider {
-    text-align: center;
-    margin: 3rem 0;
-    color: var(--gold);
-    font-size: 1.2rem;
-    letter-spacing: 1rem;
-  }
+  .divider { text-align: center; margin: 3rem 0; color: var(--gold); font-size: 1.2rem; letter-spacing: 1rem; }
 
   /* FOOTER */
   footer {
-    background: var(--ink);
-    color: var(--cream);
-    text-align: center;
-    padding: 3rem 1.5rem 2rem;
-    margin-top: 3rem;
+    background: var(--ink); color: var(--cream); text-align: center;
+    padding: 3rem 1.5rem 2rem; margin-top: 3rem;
   }
-  footer .serif {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--gold);
-    margin-bottom: 0.3rem;
-  }
+  footer .serif { font-size: 1.8rem; font-weight: 400; color: var(--gold); margin-bottom: 0.3rem; }
   footer .italian {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1rem;
-    opacity: 0.5;
-    margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 1rem; opacity: 0.5; margin-bottom: 0.5rem;
   }
-  footer p {
-    font-size: 0.68rem;
-    opacity: 0.4;
-    letter-spacing: 0.1em;
-  }
+  footer p { font-size: 0.68rem; opacity: 0.4; letter-spacing: 0.1em; }
+  footer .last-sync { font-size: 0.6rem; opacity: 0.3; margin-top: 0.5rem; font-family: 'DM Mono', monospace; }
 
   /* MAP PINS */
   .map-pin { text-align: center; line-height: 20px; }
@@ -461,23 +310,13 @@
   .map-pin.end { font-size: 22px; color: var(--ink); }
   .map-pin.stay { font-size: 18px; color: var(--terracotta); }
   .map-pin.pass { font-size: 14px; color: var(--gold-dark); }
-
   .leaflet-popup-content-wrapper { border-radius: 2px; }
-  .leaflet-popup-content {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.85rem;
-    margin: 8px 12px;
-    color: var(--ink);
-  }
+  .leaflet-popup-content { font-family: 'Inter', sans-serif; font-size: 0.85rem; margin: 8px 12px; color: var(--ink); }
   .leaflet-popup-content strong { color: var(--terracotta); }
 
-  /* MOBILE */
   @media (max-width: 640px) {
     .stats { gap: 2rem; }
-    .day {
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-    }
+    .day { grid-template-columns: 1fr; gap: 0.5rem; }
     .day-left { text-align: left; }
     .day-num { font-size: 2rem; display: inline-block; }
     .day-date { display: inline-block; margin-left: 0.5rem; margin-top: 0; }
@@ -510,11 +349,7 @@
 
 <!-- MAP -->
 <section class="section" style="padding-top:3.5rem;">
-  <div class="section-label-row">
-    <span class="section-label-line"></span>
-    <span class="section-label">Il Percorso</span>
-    <span class="section-label-line"></span>
-  </div>
+  <div class="section-label-row"><span class="section-label-line"></span><span class="section-label">Il Percorso</span><span class="section-label-line"></span></div>
   <div class="section-italian">The Route</div>
   <h2 class="section-title serif">Follow Along</h2>
   <div id="map"></div>
@@ -523,11 +358,7 @@
 
 <!-- OVERVIEW -->
 <section class="section">
-  <div class="section-label-row">
-    <span class="section-label-line"></span>
-    <span class="section-label">Il Viaggio</span>
-    <span class="section-label-line"></span>
-  </div>
+  <div class="section-label-row"><span class="section-label-line"></span><span class="section-label">Il Viaggio</span><span class="section-label-line"></span></div>
   <div class="section-italian">The Journey</div>
   <h2 class="section-title serif">The Shape of the Trip</h2>
   <div class="stats">
@@ -545,353 +376,71 @@
 
 <!-- DAY BY DAY -->
 <section class="section">
-  <div class="section-label-row">
-    <span class="section-label-line"></span>
-    <span class="section-label">Giorno per Giorno</span>
-    <span class="section-label-line"></span>
-  </div>
+  <div class="section-label-row"><span class="section-label-line"></span><span class="section-label">Giorno per Giorno</span><span class="section-label-line"></span></div>
   <div class="section-italian">Day by Day</div>
   <h2 class="section-title serif">The Itinerary</h2>
 
-  <div class="day">
-    <div class="day-left">
-      <div class="day-num">1</div>
-      <div class="day-date">Sab · Jul 4</div>
-      <div class="day-icon">🏔️</div>
-    </div>
-    <div class="day-right">
-      <div class="day-title">Geneva → Chamonix → Langhe</div>
-      <div class="day-body">
-        <p><span class="time">10:45</span> — Land in Geneva, pick up the Sixt (Mercedes C-Class). On the road.</p>
-        <p><span class="time">12:00</span> — <strong>Chamonix</strong> (~1h) — light lunch on a terrace under Mont Blanc. No hike; you're jet-lagged.</p>
-        <p><span class="time">14:00</span> — Mont Blanc tunnel → Aosta → past Torino into the Langhe (~3h). Arrive <strong>Arborina Relais, La Morra</strong> ~5 PM. Sunset over the Barolo vines.</p>
-        <p><span class="time">20:00</span> — Dinner at Arborina's restaurant, or Bovio in La Morra, or Alba (~15 min).</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="day-left">
-      <div class="day-num">2</div>
-      <div class="day-date">Dom · Jul 5</div>
-      <div class="day-icon">🌊</div>
-    </div>
-    <div class="day-right">
-      <div class="day-title">Langhe → Seaside → Chianti</div>
-      <div class="day-body">
-        <p><span class="time">09:30</span> — Breakfast at Arborina, then drive the coastal route (A26→A12).</p>
-        <p><span class="time">12:15</span> — <strong>Forte dei Marmi</strong>, Versilia coast — long seaside lunch at a beach club.</p>
-        <p><span class="time">17:00</span> — Arrive <strong>Borgo San Felice</strong>. Cellar tasting of the estate's labels (Vigorello, the first Super Tuscan).</p>
-        <p><span class="time">20:00</span> — On-property, or a Castelnuovo Berardenga trattoria.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="day-left">
-      <div class="day-num">3</div>
-      <div class="day-date">Lun · Jul 6</div>
-      <div class="day-icon">🏛️</div>
-    </div>
-    <div class="day-right">
-      <div class="day-title">Siena + Chianti</div>
-      <div class="day-body">
-        <p><span class="time">08:00</span> — <strong>Siena</strong> (20 min) — Piazza del Campo and Duomo before the buses. Park at Santa Caterina lots. Never enter the ZTL.</p>
-        <p><span class="time">12:00</span> — Lunch where the menu's handwritten. Buy something from a shop.</p>
-        <p><span class="time">14:00</span> — Pool / spa during peak heat.</p>
-        <p><span class="time">18:30</span> — Small Chianti village at golden hour — passeggiata, aperitivo, dinner where it's mostly Italians.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="day-left">
-      <div class="day-num">4</div>
-      <div class="day-date">Mar · Jul 7</div>
-      <div class="day-icon">🍷</div>
-    </div>
-    <div class="day-right">
-      <div class="day-title">Chianti Wine Route or Montalcino</div>
-      <div class="day-body">
-        <div class="options">
-          <div class="opt-label">A — Chianti Classico Loop</div>
-          <p>Radda, Gaiole, Castellina. Cellar visits, slow lunch, SR222 backroads.</p>
-        </div>
-        <div class="options" style="margin-top:0.5rem;">
-          <div class="opt-label">B — Montalcino (~1h)</div>
-          <p>Brunello tastings at the fortezza, Sant'Antimo abbey, long lunch.</p>
-        </div>
-        <p style="margin-top:0.75rem;"><span class="time">20:00</span> — <strong>World-class meal on purpose</strong> — Osteria di Passignano (Antinori, Michelin, ~40 min) or a marquee winery.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="day-left">
-      <div class="day-num">5</div>
-      <div class="day-date">Mer · Jul 8</div>
-      <div class="day-icon">🌆</div>
-    </div>
-    <div class="day-right">
-      <div class="day-title">Drive to Florence → Oltrarno</div>
-      <div class="day-body">
-        <p><span class="time">10:00</span> — San Felice → Florence (~1h15). Return Car 1 at Florence Central Train Station. Tram T2 into center.</p>
-        <p><span class="time">14:00</span> — Check into Oltrarno Airbnb, Ponte Vecchio side. Walk to the bridge, Pitti, the Duomo.</p>
-        <p><span class="time">20:00</span> — First gelato, the Duomo lit at night, dinner in the Oltrarno.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="day-left">
-      <div class="day-num">6</div>
-      <div class="day-date">Gio · Jul 9</div>
-      <div class="day-icon">🎨</div>
-    </div>
-    <div class="day-right">
-      <div class="day-title">Florence — Renaissance Day</div>
-      <div class="day-body">
-        <p><span class="time">08:15</span> — <strong>Uffizi</strong> at opening (timed entry).</p>
-        <p><span class="time">10:30</span> — Duomo complex + Baptistery doors.</p>
-        <p><span class="time">13:00</span> — Mercato di Sant'Ambrogio, with the locals.</p>
-        <p><span class="time">14:00</span> — Siesta (July rhythm).</p>
-        <p><span class="time">19:00</span> — Aperitivo in Piazza Santo Spirito, dinner in San Frediano.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="day-left">
-      <div class="day-num">7</div>
-      <div class="day-date">Ven · Jul 10</div>
-      <div class="day-icon">🌇</div>
-    </div>
-    <div class="day-right">
-      <div class="day-title">Florence — Slow Oltrarno</div>
-      <div class="day-body">
-        <p><span class="time">08:30</span> — <strong>Accademia</strong> early for David (timed entry).</p>
-        <p><span class="time">10:30</span> — Coffee at the corner bar, artisan workshops on Via Maggio, Boboli, long lunch, siesta.</p>
-        <p><span class="time">19:30</span> — Climb to Piazzale Michelangelo for sunset.</p>
-        <p><span class="time">20:30</span> — The one big Florence dinner — book in advance.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="day-left">
-      <div class="day-num">8</div>
-      <div class="day-date">Sab · Jul 11</div>
-      <div class="day-icon">🏖️</div>
-    </div>
-    <div class="day-right">
-      <div class="day-title">Drive to the Coast → L'Andana</div>
-      <div class="day-body">
-        <p><span class="time">09:00</span> — Tram/taxi to FLR, pick up Car 2 (Avis, Mercedes C-Class). Florence → L'Andana (~2h). Optional Massa Marittima stop.</p>
-        <p><span class="time">14:00</span> — Arrive, unpack, estate mode. Sunset on the terrace.</p>
-        <p><span class="time">Note</span> — Tell concierge: beach-club tomorrow, ask about skippered boat.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="day-left">
-      <div class="day-num">9</div>
-      <div class="day-date">Dom · Jul 12</div>
-      <div class="day-icon">🧖</div>
-    </div>
-    <div class="day-right">
-      <div class="day-title">Estate + Beach Club</div>
-      <div class="day-body">
-        <p><span class="time">09:00</span> — Slow breakfast. Couples massages (included).</p>
-        <p><span class="time">13:00</span> — Shuttle to <strong>La Cannucce</strong> beach club — loungers reserved, lunch at the club.</p>
-        <p><span class="time">19:00</span> — Adults-only pool, or Castiglione della Pescaia — fortress at sunset, seafood on the canal harbor.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="day-left">
-      <div class="day-num">10</div>
-      <div class="day-date">Lun · Jul 13</div>
-      <div class="day-icon">🛥️</div>
-    </div>
-    <div class="day-right">
-      <div class="day-title">Flex Day — Decide at Breakfast</div>
-      <div class="day-body">
-        <div class="options">
-          <div class="opt-label">A — Barca</div>
-          <p>Skippered half/full day from Castiglione, Punta Ala, or Talamone. Calm shallow bays, life jackets. Morning = calmer. Sunset cruise = lower-key.</p>
-        </div>
-        <div class="options" style="margin-top:0.5rem;">
-          <div class="opt-label">B — Città Tufacee</div>
-          <p>Pitigliano (~1h15, cliff-carved town) + Saturnia thermal cascades. Water shoes + towels.</p>
-        </div>
-        <div class="options" style="margin-top:0.5rem;">
-          <div class="opt-label">C — Dolce Far Niente</div>
-          <p>Pool, spa, a book under a pine tree. Castiglione harbor dinner to close.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="day-left">
-      <div class="day-num">11</div>
-      <div class="day-date">Mar · Jul 14</div>
-      <div class="day-icon">✈️</div>
-    </div>
-    <div class="day-right">
-      <div class="day-title">Roma → Home</div>
-      <div class="day-body">
-        <p><span class="time">08:30</span> — Out the door. ~2h via Via Aurelia to Rome Fiumicino. Drop Car 2 at FCO.</p>
-        <p><span class="time">11:05</span> — <strong>AA 235</strong> departs FCO → NYC. Arrives 2:35 PM.</p>
-      </div>
-    </div>
-  </div>
+  <div class="day"><div class="day-left"><div class="day-num">1</div><div class="day-date">Sab · Jul 4</div><div class="day-icon">🏔️</div></div><div class="day-right"><div class="day-title">Geneva → Chamonix → Langhe</div><div class="day-body"><p><span class="time">10:45</span> — Land in Geneva, pick up the Sixt (Mercedes C-Class). On the road.</p><p><span class="time">12:00</span> — <strong>Chamonix</strong> (~1h) — light lunch on a terrace under Mont Blanc. No hike; you're jet-lagged.</p><p><span class="time">14:00</span> — Mont Blanc tunnel → Aosta → past Torino into the Langhe (~3h). Arrive <strong>Arborina Relais, La Morra</strong> ~5 PM. Sunset over the Barolo vines.</p><p><span class="time">20:00</span> — Dinner at Arborina's restaurant, or Bovio in La Morra, or Alba (~15 min).</p></div></div></div>
+  <div class="day"><div class="day-left"><div class="day-num">2</div><div class="day-date">Dom · Jul 5</div><div class="day-icon">🌊</div></div><div class="day-right"><div class="day-title">Langhe → Seaside → Chianti</div><div class="day-body"><p><span class="time">09:30</span> — Breakfast at Arborina, then drive the coastal route (A26→A12).</p><p><span class="time">12:15</span> — <strong>Forte dei Marmi</strong>, Versilia coast — long seaside lunch at a beach club.</p><p><span class="time">17:00</span> — Arrive <strong>Borgo San Felice</strong>. Cellar tasting of the estate's labels (Vigorello, the first Super Tuscan).</p><p><span class="time">20:00</span> — On-property, or a Castelnuovo Berardenga trattoria.</p></div></div></div>
+  <div class="day"><div class="day-left"><div class="day-num">3</div><div class="day-date">Lun · Jul 6</div><div class="day-icon">🏛️</div></div><div class="day-right"><div class="day-title">Siena + Chianti</div><div class="day-body"><p><span class="time">08:00</span> — <strong>Siena</strong> (20 min) — Piazza del Campo and Duomo before the buses. Park at Santa Caterina lots. Never enter the ZTL.</p><p><span class="time">12:00</span> — Lunch where the menu's handwritten. Buy something from a shop.</p><p><span class="time">14:00</span> — Pool / spa during peak heat.</p><p><span class="time">18:30</span> — Small Chianti village at golden hour — passeggiata, aperitivo, dinner where it's mostly Italians.</p></div></div></div>
+  <div class="day"><div class="day-left"><div class="day-num">4</div><div class="day-date">Mar · Jul 7</div><div class="day-icon">🍷</div></div><div class="day-right"><div class="day-title">Chianti Wine Route or Montalcino</div><div class="day-body"><div class="options"><div class="opt-label">A — Chianti Classico Loop</div><p>Radda, Gaiole, Castellina. Cellar visits, slow lunch, SR222 backroads.</p></div><div class="options" style="margin-top:0.5rem;"><div class="opt-label">B — Montalcino (~1h)</div><p>Brunello tastings at the fortezza, Sant'Antimo abbey, long lunch.</p></div><p style="margin-top:0.75rem;"><span class="time">20:00</span> — <strong>World-class meal on purpose</strong> — Osteria di Passignano (Antinori, Michelin, ~40 min) or a marquee winery.</p></div></div></div>
+  <div class="day"><div class="day-left"><div class="day-num">5</div><div class="day-date">Mer · Jul 8</div><div class="day-icon">🌆</div></div><div class="day-right"><div class="day-title">Drive to Florence → Oltrarno</div><div class="day-body"><p><span class="time">10:00</span> — San Felice → Florence (~1h15). Return Car 1 at Florence Central Train Station. Tram T2 into center.</p><p><span class="time">14:00</span> — Check into Oltrarno Airbnb, Ponte Vecchio side. Walk to the bridge, Pitti, the Duomo.</p><p><span class="time">20:00</span> — First gelato, the Duomo lit at night, dinner in the Oltrarno.</p></div></div></div>
+  <div class="day"><div class="day-left"><div class="day-num">6</div><div class="day-date">Gio · Jul 9</div><div class="day-icon">🎨</div></div><div class="day-right"><div class="day-title">Florence — Renaissance Day</div><div class="day-body"><p><span class="time">08:15</span> — <strong>Uffizi</strong> at opening (timed entry).</p><p><span class="time">10:30</span> — Duomo complex + Baptistery doors.</p><p><span class="time">13:00</span> — Mercato di Sant'Ambrogio, with the locals.</p><p><span class="time">14:00</span> — Siesta (July rhythm).</p><p><span class="time">19:00</span> — Aperitivo in Piazza Santo Spirito, dinner in San Frediano.</p></div></div></div>
+  <div class="day"><div class="day-left"><div class="day-num">7</div><div class="day-date">Ven · Jul 10</div><div class="day-icon">🌇</div></div><div class="day-right"><div class="day-title">Florence — Slow Oltrarno</div><div class="day-body"><p><span class="time">08:30</span> — <strong>Accademia</strong> early for David (timed entry).</p><p><span class="time">10:30</span> — Coffee at the corner bar, artisan workshops on Via Maggio, Boboli, long lunch, siesta.</p><p><span class="time">19:30</span> — Climb to Piazzale Michelangelo for sunset.</p><p><span class="time">20:30</span> — The one big Florence dinner — book in advance.</p></div></div></div>
+  <div class="day"><div class="day-left"><div class="day-num">8</div><div class="day-date">Sab · Jul 11</div><div class="day-icon">🏖️</div></div><div class="day-right"><div class="day-title">Drive to the Coast → L'Andana</div><div class="day-body"><p><span class="time">09:00</span> — Tram/taxi to FLR, pick up Car 2 (Avis, Mercedes C-Class). Florence → L'Andana (~2h). Optional Massa Marittima stop.</p><p><span class="time">14:00</span> — Arrive, unpack, estate mode. Sunset on the terrace.</p><p><span class="time">Note</span> — Tell concierge: beach-club tomorrow, ask about skippered boat.</p></div></div></div>
+  <div class="day"><div class="day-left"><div class="day-num">9</div><div class="day-date">Dom · Jul 12</div><div class="day-icon">🧖</div></div><div class="day-right"><div class="day-title">Estate + Beach Club</div><div class="day-body"><p><span class="time">09:00</span> — Slow breakfast. Couples massages (included).</p><p><span class="time">13:00</span> — Shuttle to <strong>La Cannucce</strong> beach club — loungers reserved, lunch at the club.</p><p><span class="time">19:00</span> — Adults-only pool, or Castiglione della Pescaia — fortress at sunset, seafood on the canal harbor.</p></div></div></div>
+  <div class="day"><div class="day-left"><div class="day-num">10</div><div class="day-date">Lun · Jul 13</div><div class="day-icon">🛥️</div></div><div class="day-right"><div class="day-title">Flex Day — Decide at Breakfast</div><div class="day-body"><div class="options"><div class="opt-label">A — Barca</div><p>Skippered half/full day from Castiglione, Punta Ala, or Talamone. Calm shallow bays, life jackets. Morning = calmer. Sunset cruise = lower-key.</p></div><div class="options" style="margin-top:0.5rem;"><div class="opt-label">B — Città Tufacee</div><p>Pitigliano (~1h15, cliff-carved town) + Saturnia thermal cascades. Water shoes + towels.</p></div><div class="options" style="margin-top:0.5rem;"><div class="opt-label">C — Dolce Far Niente</div><p>Pool, spa, a book under a pine tree. Castiglione harbor dinner to close.</p></div></div></div></div>
+  <div class="day"><div class="day-left"><div class="day-num">11</div><div class="day-date">Mar · Jul 14</div><div class="day-icon">✈️</div></div><div class="day-right"><div class="day-title">Roma → Home</div><div class="day-body"><p><span class="time">08:30</span> — Out the door. ~2h via Via Aurelia to Rome Fiumicino. Drop Car 2 at FCO.</p><p><span class="time">11:05</span> — <strong>AA 235</strong> departs FCO → NYC. Arrives 2:35 PM.</p></div></div></div>
 </section>
 
 <div class="divider">✦ ✦ ✦</div>
 
 <!-- STAYS -->
 <section class="section">
-  <div class="section-label-row">
-    <span class="section-label-line"></span>
-    <span class="section-label">Dove Dormirete</span>
-    <span class="section-label-line"></span>
-  </div>
+  <div class="section-label-row"><span class="section-label-line"></span><span class="section-label">Dove Dormirete</span><span class="section-label-line"></span></div>
   <div class="section-italian">Where You'll Sleep</div>
   <h2 class="section-title serif">Stays</h2>
   <div class="stays">
-    <div class="stay">
-      <div class="check">✓ Jul 4 · 1 night</div>
-      <div class="name">Arborina Relais</div>
-      <div class="loc">La Morra, Langhe</div>
-      <div class="notes">Booked direct. Working wine estate in the Barolo hills.</div>
-    </div>
-    <div class="stay">
-      <div class="check">✓ Jul 5–8 · 3 nights</div>
-      <div class="name">Borgo San Felice</div>
-      <div class="loc">Chianti Classico</div>
-      <div class="notes">Amex FHR · 2 Michelin Keys · breakfast + $100 F&B</div>
-    </div>
-    <div class="stay">
-      <div class="check">✓ Jul 8–11 · 3 nights</div>
-      <div class="name">Oltrarno Airbnb</div>
-      <div class="loc">Ponte Vecchio, Firenze</div>
-      <div class="notes">Guest Favorite · walk to Pitti + bridge · car-free</div>
-    </div>
-    <div class="stay">
-      <div class="check">✓ Jul 11–14 · 3 nights</div>
-      <div class="name">L'Andana</div>
-      <div class="loc">Tenuta La Badiola, Maremma</div>
-      <div class="notes">Bilt portal · massages included · beach-club shuttle</div>
-    </div>
+    <div class="stay"><div class="check">✓ Jul 4 · 1 night</div><div class="name">Arborina Relais</div><div class="loc">La Morra, Langhe</div><div class="notes">Booked direct. Working wine estate in the Barolo hills.</div></div>
+    <div class="stay"><div class="check">✓ Jul 5–8 · 3 nights</div><div class="name">Borgo San Felice</div><div class="loc">Chianti Classico</div><div class="notes">Amex FHR · 2 Michelin Keys · breakfast + $100 F&B</div></div>
+    <div class="stay"><div class="check">✓ Jul 8–11 · 3 nights</div><div class="name">Oltrarno Airbnb</div><div class="loc">Ponte Vecchio, Firenze</div><div class="notes">Guest Favorite · walk to Pitti + bridge · car-free</div></div>
+    <div class="stay"><div class="check">✓ Jul 11–14 · 3 nights</div><div class="name">L'Andana</div><div class="loc">Tenuta La Badiola, Maremma</div><div class="notes">Bilt portal · massages included · beach-club shuttle</div></div>
   </div>
 </section>
 
-<!-- BOOKINGS -->
+<!-- BOOKINGS — DYNAMIC -->
 <section class="section">
-  <div class="section-label-row">
-    <span class="section-label-line"></span>
-    <span class="section-label">Prenotazioni</span>
-    <span class="section-label-line"></span>
-  </div>
+  <div class="section-label-row"><span class="section-label-line"></span><span class="section-label">Prenotazioni</span><span class="section-label-line"></span></div>
   <div class="section-italian">Confirmed &amp; Remaining</div>
   <h2 class="section-title serif">Bookings</h2>
-  <div class="bookings">
-    <div class="booking done">
-      <div class="status">✓ Booked</div>
-      <div class="name">Return Flight — AA 235</div>
-      <div class="details">FCO → NYC · Tue Jul 14<br>Dep 11:05 AM · Arr 2:35 PM<br>Booked via Alaska Airlines</div>
-      <div class="conf">Conf: ORKDSU</div>
-    </div>
-    <div class="booking done">
-      <div class="status">✓ Booked</div>
-      <div class="name">Car 1 — Sixt</div>
-      <div class="details">Mercedes-Benz C-Class<br>Pick up: Geneva Airport · Jul 4 @ 10:30 AM<br>Drop: Florence Train Station · Jul 8 @ 5 PM</div>
-      <div class="conf">#9736152205 · 2,122 CHF</div>
-    </div>
-    <div class="booking done">
-      <div class="status">✓ Booked</div>
-      <div class="name">Car 2 — Avis</div>
-      <div class="details">Mercedes-Benz C-Class<br>Pick up: FLR · Jul 11 @ 10:30 AM<br>Drop: FCO · Jul 14 @ 5 PM</div>
-      <div class="conf">#19052462US2</div>
-      <div class="warn">⚠ Drop-off 5 PM but flight is 11:05 AM — confirm early return</div>
-    </div>
-    <div class="booking todo">
-      <div class="status">○ To Do</div>
-      <div class="name">Uffizi Timed Entry</div>
-      <div class="details">Jul 9, 8:15 AM slot</div>
-    </div>
-    <div class="booking todo">
-      <div class="status">○ To Do</div>
-      <div class="name">Accademia Timed Entry</div>
-      <div class="details">Jul 10, morning slot</div>
-    </div>
-    <div class="booking todo">
-      <div class="status">○ To Do</div>
-      <div class="name">Destination Dinners</div>
-      <div class="details">Chianti marquee meal + big Florence dinner</div>
-    </div>
-    <div class="booking todo">
-      <div class="status">○ To Do</div>
-      <div class="name">Route Lunches</div>
-      <div class="details">Chamonix terrace (Jul 4) + Forte dei Marmi (Jul 5)</div>
-    </div>
-    <div class="booking todo">
-      <div class="status">○ To Do</div>
-      <div class="name">Concierge Requests</div>
-      <div class="details">Beach-club loungers, skippered boat, Saturnia kit</div>
-    </div>
+  <div class="bookings-controls">
+    <button class="btn" id="editToggle" onclick="toggleEdit()">✏️ Edit Bookings</button>
+    <button class="btn" id="publishBtn" onclick="publishChanges()" style="display:none;">📤 Publish Changes</button>
+    <button class="btn" id="resetBtn" onclick="resetLocal()">↻ Reset to Live</button>
   </div>
+  <div class="bookings" id="bookingsGrid"></div>
 </section>
 
 <div class="divider">✦ ✦ ✦</div>
 
 <!-- PLAYBOOK -->
 <section class="section">
-  <div class="section-label-row">
-    <span class="section-label-line"></span>
-    <span class="section-label">L'Arte di Vivere</span>
-    <span class="section-label-line"></span>
-  </div>
+  <div class="section-label-row"><span class="section-label-line"></span><span class="section-label">L'Arte di Vivere</span><span class="section-label-line"></span></div>
   <div class="section-italian">The Art of Living</div>
   <h2 class="section-title serif">The Authenticity Playbook</h2>
   <ol class="playbook">
-    <li>
-      <h3>Eat OUT, not in</h3>
-      <p>One world-class meal per leg. Every other night: a village osteria, a harbor seafood place, the trattoria on your block.</p>
-    </li>
-    <li>
-      <h3>Visit towns at living hours</h3>
-      <p>7–9am and 6–9pm. Midday is emptiest of locals, fullest of day-trippers. The passeggiata is everything.</p>
-    </li>
-    <li>
-      <h3>Anchor each visit to a transaction</h3>
-      <p>Buy the pecorino, the wine, the lunch. A purchase puts you in the life. A photo doesn't.</p>
-    </li>
-    <li>
-      <h3>Favor small towns</h3>
-      <p>Castelnuovo Berardenga at dinner beats Siena's Campo at noon. Famous ones early, small ones in the evening.</p>
-    </li>
-    <li>
-      <h3>The wine is the most authentic luxury</h3>
-      <p>A cellar tasting with the people who grew the Sangiovese is the real thing, not a staged experience.</p>
-    </li>
-    <li>
-      <h3>In Florence, live rather than visit</h3>
-      <p>Coffee at the corner bar, dinner on your block. Cross the river to the monuments by day, sleep in the neighborhood.</p>
-    </li>
+    <li><h3>Eat OUT, not in</h3><p>One world-class meal per leg. Every other night: a village osteria, a harbor seafood place, the trattoria on your block.</p></li>
+    <li><h3>Visit towns at living hours</h3><p>7–9am and 6–9pm. Midday is emptiest of locals, fullest of day-trippers. The passeggiata is everything.</p></li>
+    <li><h3>Anchor each visit to a transaction</h3><p>Buy the pecorino, the wine, the lunch. A purchase puts you in the life. A photo doesn't.</p></li>
+    <li><h3>Favor small towns</h3><p>Castelnuovo Berardenga at dinner beats Siena's Campo at noon. Famous ones early, small ones in the evening.</p></li>
+    <li><h3>The wine is the most authentic luxury</h3><p>A cellar tasting with the people who grew the Sangiovese is the real thing, not a staged experience.</p></li>
+    <li><h3>In Florence, live rather than visit</h3><p>Coffee at the corner bar, dinner on your block. Cross the river to the monuments by day, sleep in the neighborhood.</p></li>
   </ol>
 </section>
 
 <!-- PRACTICAL -->
 <section class="section">
-  <div class="section-label-row">
-    <span class="section-label-line"></span>
-    <span class="section-label">Buon a Sapersi</span>
-    <span class="section-label-line"></span>
-  </div>
+  <div class="section-label-row"><span class="section-label-line"></span><span class="section-label">Buon a Sapersi</span><span class="section-label-line"></span></div>
   <div class="section-italian">Good to Know</div>
   <h2 class="section-title serif">Practical Notes</h2>
   <ul class="practical">
@@ -909,9 +458,180 @@
   <div class="serif">Italia 2026</div>
   <div class="italian">La dolce vita ✦ Usama &amp; Qindeel</div>
   <p>04 — 14 LUGLIO 2026</p>
+  <div class="last-sync" id="lastSync"></div>
 </footer>
 
+<!-- SAVE BAR -->
+<div class="save-bar" id="saveBar">
+  <span class="save-text" id="saveText">Changes saved locally</span>
+  <button class="btn" onclick="publishChanges()">📤 Send to Dijkstra</button>
+  <button class="btn secondary" onclick="toggleEdit()">Done</button>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
 <script>
+// ===== DATA LAYER =====
+const GIST_URL = 'https://gist.githubusercontent.com/ushafqat/fac213799e1705123167876fb43e2b00/raw/bookings.json';
+const LS_KEY = 'italy2026_bookings';
+let bookingData = null;
+let editMode = false;
+
+async function loadData() {
+  // Try localStorage first (local changes), then fetch from Gist
+  const local = localStorage.getItem(LS_KEY);
+  if (local) {
+    try {
+      bookingData = JSON.parse(local);
+    } catch(e) { bookingData = null; }
+  }
+  // Always fetch latest from Gist to compare
+  try {
+    const resp = await fetch(GIST_URL + '?t=' + Date.now());
+    const remote = await resp.json();
+    if (!bookingData || (remote.lastUpdated && (!bookingData.lastUpdated || remote.lastUpdated > bookingData.lastUpdated))) {
+      // Remote is newer or we have no local data — use remote
+      bookingData = remote;
+      localStorage.removeItem(LS_KEY); // clear stale local
+    }
+  } catch(e) {
+    // Offline or Gist down — use whatever we have
+    if (!bookingData) {
+      // Fallback to embedded defaults
+      bookingData = { bookings: [], lastUpdated: 'unknown' };
+    }
+  }
+  renderBookings();
+  updateSyncTime();
+}
+
+function saveLocal() {
+  bookingData.lastUpdated = new Date().toISOString();
+  localStorage.setItem(LS_KEY, JSON.stringify(bookingData));
+  showSaveBar();
+  updateSyncTime();
+}
+
+async function publishChanges() {
+  const json = JSON.stringify(bookingData);
+  // Copy to clipboard
+  try {
+    await navigator.clipboard.writeText(json);
+    showToast('📋 Copied! Paste into iMessage to Dijkstra to publish live');
+  } catch(e) {
+    // Fallback for older browsers
+    const ta = document.createElement('textarea');
+    ta.value = json;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast('📋 Copied! Paste into iMessage to Dijkstra to publish live');
+  }
+}
+
+function resetLocal() {
+  if (!confirm('Reset to the live version? Your local changes will be lost.')) return;
+  localStorage.removeItem(LS_KEY);
+  loadData();
+  showToast('↻ Reset to live data');
+}
+
+function showSaveBar() {
+  document.getElementById('saveBar').classList.add('visible');
+  document.getElementById('saveText').textContent = 'Changes saved locally — publish to go live';
+  document.getElementById('publishBtn').style.display = 'inline-block';
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+function updateSyncTime() {
+  const el = document.getElementById('lastSync');
+  if (bookingData && bookingData.lastUpdated) {
+    const d = new Date(bookingData.lastUpdated);
+    const local = d.toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+    el.textContent = 'Last updated: ' + local;
+  }
+}
+
+// ===== RENDER =====
+function renderBookings() {
+  const grid = document.getElementById('bookingsGrid');
+  grid.innerHTML = '';
+  if (!bookingData || !bookingData.bookings) return;
+
+  bookingData.bookings.forEach((b, i) => {
+    const div = document.createElement('div');
+    div.className = 'booking ' + b.status + (editMode ? ' editing' : '');
+    div.dataset.idx = i;
+
+    if (editMode) {
+      div.innerHTML = `
+        <div class="edit-row">
+          <span class="edit-label">Status</span>
+          <div class="status-toggle">
+            <label><input type="radio" name="status-${i}" value="done" ${b.status==='done'?'checked':''} onchange="updateField(${i},'status',this.value)"> ✓ Booked</label>
+            <label><input type="radio" name="status-${i}" value="todo" ${b.status==='todo'?'checked':''} onchange="updateField(${i},'status',this.value)"> ○ To Do</label>
+          </div>
+        </div>
+        <div class="edit-row">
+          <span class="edit-label">Name</span>
+          <input type="text" value="${escapeHtml(b.name)}" onchange="updateField(${i},'name',this.value)">
+        </div>
+        <div class="edit-row">
+          <span class="edit-label">Details</span>
+          <textarea onchange="updateField(${i},'details',this.value)">${escapeHtml(b.details)}</textarea>
+        </div>
+        <div class="edit-row">
+          <span class="edit-label">Confirmation #</span>
+          <input type="text" value="${escapeHtml(b.conf||'')}" onchange="updateField(${i},'conf',this.value)">
+        </div>
+        <div class="edit-row">
+          <span class="edit-label">Warning</span>
+          <input type="text" value="${escapeHtml(b.warn||'')}" onchange="updateField(${i},'warn',this.value)">
+        </div>
+      `;
+    } else {
+      let html = `<div class="status">${b.status==='done' ? '✓ Booked' : '○ To Do'}</div>`;
+      html += `<div class="name">${escapeHtml(b.name)}</div>`;
+      html += `<div class="details">${escapeHtml(b.details)}</div>`;
+      if (b.conf) html += `<div class="conf">${escapeHtml(b.conf)}</div>`;
+      if (b.warn) html += `<div class="warn">${escapeHtml(b.warn)}</div>`;
+      div.innerHTML = html;
+    }
+    grid.appendChild(div);
+  });
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function updateField(idx, field, value) {
+  bookingData.bookings[idx][field] = value;
+  saveLocal();
+  // Re-render only if status changed (affects styling)
+  if (field === 'status') renderBookings();
+}
+
+function toggleEdit() {
+  editMode = !editMode;
+  document.getElementById('editToggle').textContent = editMode ? '✓ Done Editing' : '✏️ Edit Bookings';
+  document.getElementById('editToggle').classList.toggle('active', editMode);
+  if (!editMode) {
+    document.getElementById('saveBar').classList.remove('visible');
+  }
+  renderBookings();
+}
+
+// ===== MAP =====
 const stops = [
   { name: "Ginevra (Geneva)",      coords: [46.2382, 6.1090],  type: "start" },
   { name: "Chamonix — Mont Blanc", coords: [45.9237, 6.8677],  type: "pass" },
@@ -924,10 +644,8 @@ const stops = [
 ];
 
 const map = L.map('map', { scrollWheelZoom: false }).setView([44.5, 9.5], 6);
-
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-  attribution: '© OpenStreetMap, © CARTO',
-  maxZoom: 18
+  attribution: '© OpenStreetMap, © CARTO', maxZoom: 18
 }).addTo(map);
 
 const icons = {
@@ -940,19 +658,13 @@ const icons = {
 const routeCoords = [];
 stops.forEach(s => {
   routeCoords.push(s.coords);
-  L.marker(s.coords, { icon: icons[s.type] })
-    .addTo(map)
-    .bindPopup('<strong>' + s.name + '</strong>');
+  L.marker(s.coords, { icon: icons[s.type] }).addTo(map).bindPopup('<strong>' + s.name + '</strong>');
 });
-
-L.polyline(routeCoords, {
-  color: '#c45a3a',
-  weight: 3,
-  opacity: 0.6,
-  dashArray: '8,10'
-}).addTo(map);
-
+L.polyline(routeCoords, { color: '#c45a3a', weight: 3, opacity: 0.6, dashArray: '8,10' }).addTo(map);
 map.fitBounds(routeCoords, { padding: [40, 40] });
+
+// ===== INIT =====
+loadData();
 </script>
 
 </body>

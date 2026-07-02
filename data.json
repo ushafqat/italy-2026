@@ -1,0 +1,13 @@
+{
+  "bookings": [
+    {"id": "flight", "name": "Return Flight — AA 235", "status": "done", "details": "FCO → NYC · Tue Jul 14\nDep 11:05 AM · Arr 2:35 PM\nBooked via Alaska Airlines", "conf": "ORKDSU", "warn": ""},
+    {"id": "car1", "name": "Car 1 — Sixt", "status": "done", "details": "Mercedes-Benz C-Class\nPick up: Geneva Airport · Jul 4 @ 10:30 AM\nDrop: Florence Train Station · Jul 8 @ 5 PM", "conf": "#9736152205 · 2,122 CHF", "warn": ""},
+    {"id": "car2", "name": "Car 2 — Avis", "status": "done", "details": "Mercedes-Benz C-Class\nPick up: FLR · Jul 11 @ 10:30 AM\nDrop: FCO · Jul 14 @ 5 PM", "conf": "#19052462US2", "warn": "⚠ Drop-off 5 PM but flight is 11:05 AM — confirm early return"},
+    {"id": "uffizi", "name": "Uffizi Timed Entry", "status": "todo", "details": "Jul 9, 8:15 AM slot", "conf": "", "warn": ""},
+    {"id": "accademia", "name": "Accademia Timed Entry", "status": "todo", "details": "Jul 10, morning slot", "conf": "", "warn": ""},
+    {"id": "dinners", "name": "Destination Dinners", "status": "todo", "details": "Chianti marquee meal + big Florence dinner", "conf": "", "warn": ""},
+    {"id": "lunches", "name": "Route Lunches", "status": "todo", "details": "Chamonix terrace (Jul 4) + Forte dei Marmi (Jul 5)", "conf": "", "warn": ""},
+    {"id": "concierge", "name": "Concierge Requests", "status": "todo", "details": "Beach-club loungers, skippered boat, Saturnia kit", "conf": "", "warn": ""}
+  ],
+  "lastUpdated": "2026-07-02T18:39:00Z"
+}
